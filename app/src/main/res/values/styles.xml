@@ -1,7 +1,10 @@
 <resources>
 
     <!-- Base application theme. -->
+    <!-- No showing action bar -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Showing action bar. -->
+    <!--<style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar"> -->
         <!-- Customize your theme here. -->
     </style>
 
