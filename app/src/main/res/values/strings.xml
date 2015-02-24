@@ -11,4 +11,7 @@
     <string name="action_settings">Settings</string>
     <string name="about_us">About Us</string>
 
+    <string name="title_app">Show Me Your Money</string>
+    <string name="title_account">Account</string>
+
 </resources>

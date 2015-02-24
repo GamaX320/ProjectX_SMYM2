@@ -60,6 +60,8 @@ public class MainActivity extends ActionBarActivity
             case 1:
                 objFragment=new menu2_fragment();
                 break;
+            case 2:
+                objFragment=new menu_Account();
         }
 
         // update the main content by replacing fragments

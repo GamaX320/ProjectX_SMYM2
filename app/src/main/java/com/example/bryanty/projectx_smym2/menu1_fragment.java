@@ -6,6 +6,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by BRYANTY on 23/02/2015.
@@ -17,4 +21,6 @@ public class menu1_fragment extends Fragment{
         rootView=inflater.inflate(R.layout.menu1_layout,container,false);
         return rootView;
     }
+
+
 }
