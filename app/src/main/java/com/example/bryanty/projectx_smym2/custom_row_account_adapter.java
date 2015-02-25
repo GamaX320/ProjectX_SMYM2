@@ -22,7 +22,6 @@ public class custom_row_account_adapter extends ArrayAdapter<String>{
         View customView= rowAccInflater.inflate(R.layout.custom_row_account,parent,false);
 
         String singleAcc= getItem(position);
-        char firstChar= singleAcc.charAt(0);
         TextView accAvatar=(TextView)customView.findViewById(R.id.textView_acc_avatar);
         TextView accName=(TextView)customView.findViewById(R.id.textView_acc_name);
 

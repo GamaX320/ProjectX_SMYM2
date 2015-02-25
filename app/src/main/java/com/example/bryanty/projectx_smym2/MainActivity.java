@@ -5,9 +5,12 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.widget.DrawerLayout;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -15,7 +18,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 
@@ -32,6 +37,11 @@ public class MainActivity extends ActionBarActivity
      */
     private CharSequence mTitle;
 
+    //custom navigation drawer
+    private String[] mNavigationDrawerItemTitles;
+    private DrawerLayout mDrawerLayout;
+    private ListView mDrawerList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,9 +55,10 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
     }
 
-    @Override
+    //@Override
     public void onNavigationDrawerItemSelected(int position) {
 
         //add custom navigation drawer
@@ -62,14 +73,15 @@ public class MainActivity extends ActionBarActivity
                 break;
             case 2:
                 objFragment=new menu_Account();
+                break;
         }
 
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                //.replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
-                .replace(R.id.container,objFragment)
-                .commit();
+               .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+               .replace(R.id.container,objFragment)
+               .commit();
     }
 
     public void onSectionAttached(int number) {
