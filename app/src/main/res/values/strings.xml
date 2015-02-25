@@ -13,6 +13,6 @@
     <string name="title_app">Show Me Your Money</string>
     <string name="title_account">Account</string>
     <string name="title_activity_create_account">CreateAccountActivity</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="title_create_account">Create Account</string>
 
 </resources>
