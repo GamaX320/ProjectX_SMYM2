@@ -1,6 +1,7 @@
 package com.example.bryanty.projectx_smym2;
 
 import android.app.Activity;
+import android.content.res.Configuration;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -37,17 +38,13 @@ public class MainActivity extends ActionBarActivity
      */
     private CharSequence mTitle;
 
-    //custom navigation drawer
-    private String[] mNavigationDrawerItemTitles;
-    private DrawerLayout mDrawerLayout;
-    private ListView mDrawerList;
-
+    //default onCreate
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mNavigationDrawerFragment = (NavigationDrawerFragment)
+       mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
 
@@ -55,7 +52,6 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
-
     }
 
     //@Override
@@ -76,12 +72,12 @@ public class MainActivity extends ActionBarActivity
                 break;
         }
 
-        // update the main content by replacing fragments
+        //update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
                .replace(R.id.container,objFragment)
-               .commit();
+              .commit();
     }
 
     public void onSectionAttached(int number) {
@@ -131,8 +127,8 @@ public class MainActivity extends ActionBarActivity
             return true;
         }
 
-        return super.onOptionsItemSelected(item);
-    }
+       return super.onOptionsItemSelected(item);
+   }
 
     /**
      * A placeholder fragment containing a simple view.

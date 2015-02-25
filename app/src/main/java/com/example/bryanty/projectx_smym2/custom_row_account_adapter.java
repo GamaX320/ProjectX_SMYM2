@@ -24,9 +24,11 @@ public class custom_row_account_adapter extends ArrayAdapter<String>{
         String singleAcc= getItem(position);
         TextView accAvatar=(TextView)customView.findViewById(R.id.textView_acc_avatar);
         TextView accName=(TextView)customView.findViewById(R.id.textView_acc_name);
+        TextView accAmount=(TextView)customView.findViewById(R.id.textView_amount);
 
         accAvatar.setText(singleAcc.substring(0,1));
         accName.setText(singleAcc);
+        accAmount.setText("RM50.00");
 
         return customView;
     }

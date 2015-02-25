@@ -1,14 +1,18 @@
 package com.example.bryanty.projectx_smym2;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -42,7 +46,25 @@ public class menu_Account extends Fragment{
                 Toast.makeText(getActivity(),"Click ListItem Number " + position, Toast.LENGTH_LONG).show();
             }
         });
-            return rootView;
+
+        //add new account button listener
+        ImageButton btnAdd=(ImageButton) rootView.findViewById(R.id.imageButton_add);
+        btnAdd.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent=new Intent(getActivity(),CreateAccountActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        return rootView;
         }
+
+    public void createNewAcc(View view){
+        Intent intent=new Intent(getActivity(),CreateAccountActivity.class);
+        startActivity(intent);
+    }
 
     }
