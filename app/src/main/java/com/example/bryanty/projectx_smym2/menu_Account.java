@@ -27,7 +27,7 @@ public class menu_Account extends Fragment{
         rootView=inflater.inflate(R.layout.menu_account_layout,container,false);
 
         //list view
-        String[] foods={"Bacon","Cindy","Tuna","Hawaii","Chicken"};
+        String[] foods={"Steve","Cindy","Mark","Justin","Robert"};
         //default adapter
         //ListAdapter accountAdapter=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,foods);
 

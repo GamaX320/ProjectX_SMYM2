@@ -24,6 +24,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.bryanty.projectx_smym2.MainActivity" />
         </activity>
+        <activity
+            android:name=".CreateExpenseActivity"
+            android:label="@string/title_activity_create_expense"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.bryanty.projectx_smym2.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

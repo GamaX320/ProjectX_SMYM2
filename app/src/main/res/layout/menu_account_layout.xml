@@ -24,7 +24,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="10dp"
+        android:choiceMode="singleChoice" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -34,7 +35,7 @@
         android:layout_alignBottom="@+id/listView_account"
         android:layout_alignRight="@+id/listView_account"
         android:layout_alignEnd="@+id/listView_account"
-        android:background="#F1F1F1"
+        android:background="#DEDEDE"
         android:layout_margin="1dp"
         android:clickable="true"
         android:scaleType="fitCenter"

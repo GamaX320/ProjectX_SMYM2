@@ -12,7 +12,8 @@
         android:background="@drawable/ic_avatar_back_1"
         android:gravity="center_vertical|center_horizontal"
         android:textSize="30dp"
-        android:textColor="#000" />
+        android:textColor="#000"
+        android:singleLine="false" />
 
     <TextView
         android:layout_width="wrap_content"
